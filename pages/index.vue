@@ -38,7 +38,7 @@ export default {
 <style module>
 .tag-line {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--spacing-lg);
   align-items: center;
 }

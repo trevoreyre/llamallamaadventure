@@ -14,6 +14,12 @@
   padding-top: 56.25%;
 }
 
+@media screen and (max-width: 960px) {
+  .container {
+    padding-top: 100%;
+  }
+}
+
 .map {
   position: absolute;
   top: 0;
