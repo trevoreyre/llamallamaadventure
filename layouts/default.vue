@@ -1,43 +1,46 @@
 <script>
-import { AppBar, Css } from '@slate-ui/core'
-import Logo from '~/components/Logo.vue'
+import { Css } from '@slate-ui/core'
 
 export default {
-  components: { AppBar, Css, Logo },
+  components: { Css },
 }
 </script>
 
 <template>
   <Css>
-    <AppBar :class="$style.appBar" theme="light">
-      <NuxtLink to="/" :class="$style.logo">
-        <Logo />
-      </NuxtLink>
-      <div>
-        <NuxtLink to="/">
-          Home
-        </NuxtLink>
-        <NuxtLink to="/">
-          Contact
-        </NuxtLink>
-      </div>
-    </AppBar>
-    <nuxt />
+    <main :class="$style.main">
+      <nuxt />
+    </main>
   </Css>
 </template>
 
 <style module>
-.app-bar.app-bar {
-  --border: var(--border-none);
-}
-
-.logo {
-  height: var(--spacing-7xl);
+.main {
+  display: block;
+  padding: var(--spacing-2xl) var(--spacing-sm);
 }
 </style>
 
 <style>
+:root {
+  --color-brand-500: #9fee80;
+  --color-brand-700: #58c42e;
+  --color-text-primary: #4e616c;
+}
+
 body {
   background: var(--color-background-light);
+}
+
+iframe {
+  border: none;
+  display: block;
+  width: 100%;
+}
+
+p,
+a {
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 </style>
